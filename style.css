@@ -1,0 +1,224 @@
+/* 
+
+## Colors
+
+### Primary
+
+- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+
+### Neutral
+
+- Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weight: 700
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+    --Blue:hsl(237, 63%, 64%);
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: var(--Very-Light-Grayish-Blue);
+    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+    background-position-x: 100%, 0%;
+    background-position-y: 0%, 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    color: var(--Grayish-Blue)
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.toggle-cont{
+    width: 3.5rem;
+    height: 2rem;
+    background-color: var(--Blue);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    margin: 0 .5rem 0;
+    position: relative;
+}
+
+.toggle-cont:hover{
+    cursor: pointer;
+    background-color: var(--Grayish-Blue);
+}
+
+.toggle{
+    width: 50%;
+    background-color: var(--Very-Light-Grayish-Blue);
+    height: 80%;
+    border-radius: 5rem;
+    margin: 0 .2rem 0;
+    position: relative;
+    transition: transform 0.3s ease; 
+}
+
+main{
+    margin-top: 5rem;
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    align-items: center;
+    font-weight: 700;
+}
+
+main>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: var(--Dark-Grayish-Blue);
+    width: 33%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px -10px;
+    line-height: 2.75;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+main>div>h2{
+    margin: 0;
+}
+
+
+main>div>h1{
+    margin: 0;
+}
+
+main>div:nth-child(2){
+    padding: 4rem 2rem;
+    background-color: var(--Blue);
+    color: #fff;
+    box-shadow: none;
+    width: 34%;
+}
+
+main>div:nth-child(2)>h2{
+    color: #fff;
+}
+
+main>div>button{
+    border: none;
+    border-radius: .5rem;
+    height: 3rem;
+    width: 80%;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient( to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color:#fff;
+    margin-top: 2rem;
+}
+
+main>div:nth-child(2)>button{
+    background: #fff;
+    color: var(--Blue);
+}
+
+main>div>button:hover{
+    cursor: pointer;
+    background: #fff;
+    border-color: var(--Blue);
+    color: var(--Blue);
+    border-style: solid;
+    border-width: 2px;
+    transition: .3s ease;
+}
+
+main>div>div{
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: var(--Grayish-Blue);
+}
+
+main>div>div:first-of-type{
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: var(--Grayish-Blue);
+}
+
+main>div:nth-child(2)>button:hover{
+    background-color: var(--Blue);
+    border-color: #fff;
+    color: #fff;
+}
+
+/* ARBITRARY CLASSES */
+
+.left{
+    transform: translateX(75%);
+}
+
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+@media(max-width:768px){
+    body{
+        background: url(./images/bg-top.svg);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position-x: 225%;
+    }
+
+    main{
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    main>div{
+        width: 80%;
+    }
+    main>div:nth-child(2){
+        width: 80%;
+    }
+}
+
+.attribution { font-size: 15px; text-align: center; margin-top: 2rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
